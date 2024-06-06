@@ -26,7 +26,6 @@ export default {
           // this.films.push(response.results)
           this.store.results = response.data.results
 
-          console.log(this.store.results)
         })
     },
     tvGen(){
@@ -35,9 +34,8 @@ export default {
         .then(response => {
           // console.log(response);
           // this.films.push(response.results)
-          this.store.results = response.data.results
-
-          console.log(this.store.results)
+          this.store.resultTv = response.data.resultTv
+          console.log(response.data);
         })
     }
   }
