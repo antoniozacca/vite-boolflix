@@ -34,8 +34,7 @@ export default {
         .then(response => {
           // console.log(response);
           // this.films.push(response.results)
-          this.store.resultTv = response.data.resultTv
-          console.log(response.data);
+          this.store.resultTv = response.data.results
         })
     }
   }
@@ -45,8 +44,8 @@ export default {
 <template>
   <form @submit.prevent="seachAll">
     <!-- v-model -->
-    <input v-model="search" type="text">
-    <button @click.prevent="filmsGen" >clicca qui</button>
+    <input v-model="search" type="text" placeholder="Scegli il tuo film">
+    <button >Cerca</button>
   </form>
   <AppMain />
 </template>
