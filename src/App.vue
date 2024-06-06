@@ -1,8 +1,7 @@
 <script>
 import { store } from './store.js'
 import axios from 'axios';
-import AppMain from './components/AppMain.vue'
-
+import AppMain from './assets/components/AppMain.vue';
 export default {
   components :{
     AppMain,
