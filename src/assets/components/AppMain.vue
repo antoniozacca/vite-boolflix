@@ -19,6 +19,7 @@ export default {
             {{ film.title }} -
             {{ film.original_title }}
             <li>
+                {{ film.original_language }}
                 <ChangeFlag :languageCode="film.original_language" />
             </li>
             <li>{{ film.vote_average }}</li>

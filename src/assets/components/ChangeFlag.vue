@@ -1,7 +1,7 @@
 <template>
     <div id="flag-container">
       <span v-if="countryCode" :class="['flag-icon', `flag-icon-${countryCode}`, 'flag']"></span>
-      <div v-else class="flag-fallback">N/A</div>
+      <div v-else class="flag-fallback">Bandiera non disponibile</div>
     </div>
   </template>
   
@@ -19,7 +19,12 @@
         const languageToCountryMap = {
           'en': 'us',
           'it': 'it',
-          'fr': 'fr'
+          'fr': 'fr',
+          'es': 'es',
+          'ja': 'ja',
+          'cn': 'cn',
+          'ru': 'ru',
+          'de': 'de'
         };
         return languageToCountryMap[this.languageCode] || null;
       }
