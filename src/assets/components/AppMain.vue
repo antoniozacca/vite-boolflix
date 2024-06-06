@@ -27,4 +27,15 @@ export default {
             </ul>
         </li>
     </ul>
+    <ul>
+        <li v-for="(film, index) in store.resultTv" :key="index">
+            <span>{{ film.name }} - {{ film.original_name }}</span>
+            <ul>
+                <li>{{ film.original_language }}
+                    <ChangeFlag :languageCode="film.original_language" />
+                </li>
+                <li>{{ film.vote_average }}</li>
+            </ul>
+        </li>
+    </ul>
 </template>
