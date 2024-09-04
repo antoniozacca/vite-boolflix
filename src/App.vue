@@ -43,7 +43,16 @@ export default {
       axios.get(url).then(response => {
         this.store.resultImg = response.data.results
       })
+    },
+    getRecommenderMovies(){
+      let url = `${this.store.apiUrlPopular}${this.store.apiKey}&query=${this.search}&language=it-IT`;
+      axios.get(url).then(response => {
+        this.store.results = response.data.results;
+      })
     }
+  },
+  mounted(){
+    this.getRecommenderMovies();
   }
 }
 </script>
@@ -57,7 +66,9 @@ export default {
         <button class="btn btn-outline color-red border-red">Cerca</button>
       </form>
 
+
     </div>
+    
 
   </nav>
   <AppMain />

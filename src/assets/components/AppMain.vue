@@ -37,6 +37,7 @@ export default {
 </script>
 
 <template>
+  <h2 class="text-white">Consigliati dagli utenti</h2>
     <ul class="film-list mt-5 margin-left">
       <!-- Ciclo per i film -->
       <li class="poster-container" v-for="(film, index) in store.results" :key="index">
